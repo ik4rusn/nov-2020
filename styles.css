@@ -23,6 +23,11 @@ header{
     margin-left: 30px;
     margin-top: 2px;
     font-size: 25px;
+    cursor: pointer;
+}
+
+.sidebar i:hover{
+    color:#127b8e;
 }
 
 .sidebar b{
@@ -41,7 +46,7 @@ header{
 .side-bar{
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 20%;
     height: 100vh;
     background: #23242B;
 }
@@ -70,13 +75,14 @@ nav{
 
 nav ul li{
     list-style: none;
-    margin-top: 30px;
+    padding: 10px ;
     transition: 500ms;
+    cursor: pointer;
 }
 
 nav ul li:hover{
     background :#127b8e;
-    padding: 15px;
+    
 }
 
 nav ul li a{
@@ -88,7 +94,7 @@ nav ul li a i{
 }
 
 .nav i{
-    margin-left: 20px;
+    margin-left: 10px;
     font-size: 25px;
 }
 
@@ -102,7 +108,7 @@ nav ul li a i{
     justify-content: center;
     align-items: center;
     background: url("img/bg.jpg");
-    width: 85%;
+    width: 100%;
     height: 100vh;
     background-size: cover;
     background-position-y: -50px;
@@ -122,4 +128,26 @@ nav ul li a i{
     padding: 7px ;
     text-align: center;
     font-weight: lighter;
+}
+
+#navbtn{
+   display: inline-block;
+   transition: 500ms color;
+    
+}
+
+#checkbox{
+    display: none;
+}
+
+#checkbox:checked ~ .body .side-bar{
+    width: 60px;
+}
+
+#checkbox:checked ~ .body .side-bar .photo{
+    visibility: hidden;
+}
+
+#checkbox:checked ~ .body .side-bar a span{
+    visibility: hidden;
 }
